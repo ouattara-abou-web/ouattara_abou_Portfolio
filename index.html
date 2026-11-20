@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Ouattara Abou — Réseau & Sécurité Informatique</title>
+<link href="https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400&family=Bebas+Neue&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet"/>
+<link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+
+<div id="cx"></div>
+<div id="cr"></div>
+<canvas id="grid-canvas"></canvas>
+<input type="file" id="file-inp" accept="image/*"/>
+
+<!-- ══ NAV ═══════════════════════════════════════════ -->
+<nav id="main-nav">
+  <div class="nav-logo">YOUNG <em> HACKER</em></div>
+  <ul class="nav-links">
+    <li><a href="#about">À propos</a></li>
+    <li><a href="#skills">Compétences</a></li>
+    <li><a href="#projects">Projets</a></li>
+    <li><a href="#certifications">Certifications</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+  <button class="nav-pill" onclick="scrollTo({top:document.getElementById('contact').offsetTop,behavior:'smooth'})">STAGE 2026</button>
+</nav>
+
+<!-- ══ HERO ═══════════════════════════════════════════ -->
+<section id="hero" style="position:relative;z-index:2;max-width:1300px;margin:0 auto;display:grid;grid-template-columns:1fr 400px;gap:3rem;align-items:center;padding:100px 5vw 60px;min-height:100vh;">
+  <div class="hero-content">
+    <div class="hero-sup">DISPONIBLE · STAGE / FREELANCE / ALTERNANCE </div>
+    <h1 class="hero-h1">
+      <span class="name-line">Ouattara</span>
+      <span class="name-line grad">Abou</span>
+    </h1>
+    <div class="hero-role">
+      <span class="tp">root@kali:</span>
+      <span class="tc">&nbsp;Étudiant Réseau &amp; Sécurité Informatique</span>
+      <span class="cursor-blink"></span>
+    </div>
+    <p class="hero-bio">Passionné par la cybersécurité offensive et défensive, la cryptographie et la protection des infrastructures réseau et système.<br>Diplôme d'une Licence en Réseaux & Sécurite Informatique — Autodidacte en Cybersécurité ,Vibecoding et la Installation des caméras de vidéosurveillance.</p>
+    <div class="hero-actions">
+      <a href="#projects" class="btn-solid">Voir mes projets</a>
+      <a href="#contact" class="btn-outline">Me contacter</a>
+    </div>
+    <div class="hero-stats">
+      <div class="hstat"><div class="hstat-n">3+</div><div class="hstat-l">CTF RÉSOLUS</div></div>
+      <div class="hstat"><div class="hstat-n">4</div><div class="hstat-l">PROJETS</div></div>
+      <div class="hstat"><div class="hstat-n">4</div><div class="hstat-l">CERTIFICATIONS</div></div>
+    </div>
+  </div>
+
+  <!-- PHOTO -->
+  <div class="photo-section" style="display: flex; flex-direction: column; align-items: center; text-align: center;">
+    <div class="f-avatar" style="width: 210px; height: 210px; border-radius: 50%; border: 2px solid var(--cyan); margin-bottom: 1.5rem;">
+      <img src="photo.jpg" alt="Ouattara Abou" style="width: 100%; height: 100%; object-fit: cover; filter: grayscale(15%);" />
+    </div>
+    <div class="f-person" style="text-align: center;">
+      <span class="f-name" style="font-size: 1.8rem;">Ouattara Abou</span>
+      <span class="f-role" style="display: block; margin-top: 0.3rem;">Support IT - Maintenance et Support Informatique - Cybersécurité - Vibecoding Junior</span>
+    </div>
+    <div class="f-status" style="margin-top: 1rem;">
+      <div class="f-dot"></div>
+      DISPONIBLE POUR UN STAGE, UNE ALTERNANCE OU UN TRAVAIL FREELANCE
+    </div>
+  </div>
+
+</section>
+
+<!-- ══ ABOUT ══════════════════════════════════════════ -->
+<section id="about" class="section-wrap" style="background:var(--ink2);border-top:1px solid var(--line);border-bottom:1px solid var(--line);">
+  <div class="section-inner">
+    <div class="about-grid">
+      <div class="reveal">
+        <div class="section-eyebrow">PROFIL</div>
+        <h2 class="section-title">À PROPOS DE MOI</h2>
+        <p class="about-text">Étudiant et professionnel passionné dans le domaine des réseaux, systèmes et de la sécurité informatique, je consacre mon parcours à la protection des systèmes d'information et à la maîtrise des infrastructures réseau et les Utilisateurs.</p>
+        <p class="about-text">Passionné par une curiosité constante pour les nouvelles menaces et technologies, je m'engage à développer des compétences solides en cybersécurité afin de contribuer à un environnement numérique plus sûr.</p>
+        <div class="info-chips">
+          <div class="chip"><strong>Formation :</strong> Licence en Réseau et Sécurite Informatique</div>
+          <div class="chip"><strong>Ville :</strong> Abidjan, Côte d'Ivoire</div>
+          <div class="chip"><strong>Spécialité :</strong> Pentest web - Réseaux - Maintenance et support informatique - Techniciens IT</div>
+          <div class="chip"><strong>Langues :</strong> Français · baoule · Dioula</div>
+          <div class="chip"><strong>Disponibilité :</strong> Stage 2026</div>
+          <div class="chip"><strong>HTB Rank :</strong> Hacker Debutant</div>
+        </div>
+      </div>
+      <div class="reveal" style="transition-delay:.2s">
+        <div class="terminal">
+          <div class="term-bar"><div class="dot r"></div><div class="dot y"></div><div class="dot g"></div><span class="term-title">profile.sh — bash</span></div>
+          <div class="term-body">
+            <div><span class="tp">➜</span> <span class="tc">whoami</span></div>
+            <div><span class="to">» </span><span class="tv">Ouattara Abou ---- Support IT, Techniciens réseau et systèmes, Techniciens Installation de vidéosurveillance,Cybersécurité & Vibecoding Junior</span></div>
+            <div class="term-gap"><span class="tp">➜</span> <span class="tc">cat about.json</span></div>
+            <div><span class="to">{</span></div>
+            <div><span class="to">&nbsp;</span><span class="tv">"role"</span><span class="to">: </span><span class="tstr">"Etudiant en IT passionne de la Cybersécurite"</span><span class="to">,</span></div>
+            <div><span class="to">&nbsp;</span><span class="tv">"year"</span><span class="to">: </span><span class="tstr">"Diplôme en Réseau et Sécurite Informatique "</span><span class="to">,</span></div>
+            <div><span class="to">&nbsp;</span><span class="tv">"focus"</span><span class="to">: [</span><span class="tok">"Pentest Web Junior"</span><span class="to">,</span><span class="tok">"Techniciens Réseaux et Systémes"</span><span class="to">,</ span><span class="tok">"Installation de vidéosurveillance et Vibecoding"</ span>< span class="to">],</ span>
+            <div><span class="to">&nbsp;</span><span class="tv">"ctf_rank"</span><span class="to">: </span><span class="tstr">"Hacker Debutant"</span><span class="to">,</span></div>
+            <div><span class="to">&nbsp;</span><span class="tv">"open"</span><span class="to">: </span><span class="tok">true</span></div>
+            <div><span class="to">}</span></div>
+            <div class="term-gap"><span class="tp">➜</span> <span class="tc">./check_status</span></div>
+            <div><span class="tok">✓ AVAILABLE</span><span class="to"> — Stage / Alternance 2026</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ SKILLS ══════════════════════════════════════════ -->
+<section id="skills" class="section-wrap">
+  <div class="section-inner">
+    <div class="reveal" style="text-align:center;margin-bottom:3rem;">
+      <div class="section-eyebrow" style="justify-content:center;">ARSENAL TECHNIQUE</div>
+      <h2 class="section-title" style="margin-bottom:0;">Compétences</h2>
+    </div>
+    <div class="skills-grid">
+      <!-- card -->
+      <div class="skill-card reveal">
+        <div class="skill-ico">🔒</div><div class="skill-name">Sécurité Offensive</div>
+        <div class="bars">
+          <div><div class="bar-label"><span>Attaque DDOS Wireless</span><span>85%</span></div><div class="bar-track"><div class="bar-fill" data-w="85"></div></div></div>
+          <div><div class="bar-label"><span>Nmap / Nessus</span><span>80%</span></div><div class="bar-track"><div class="bar-fill" data-w="80"></div></div></div>
+          <div><div class="bar-label"><span>Burp Suite</span><span>65%</span></div><div class="bar-track"><div class="bar-fill" data-w="65"></div></div></div>
+          <div><div class="bar-label"><span>Kali Linux</span><span>80%</span></div><div class="bar-track"><div class="bar-fill" data-w="80"></div></div></div>
+        </div>
+      </div>
+      <div class="skill-card reveal" style="transition-delay:.1s">
+        <div class="skill-ico">🌐</div><div class="skill-name">Réseaux & Protocoles</div>
+        <div class="bars">
+          <div><div class="bar-label"><span>TCP/IP, BGP, OSPF</span><span>88%</span></div><div class="bar-track"><div class="bar-fill" data-w="88"></div></div></div>
+          <div><div class="bar-label"><span>Cisco / Packet Tracer</span><span>85%</span></div><div class="bar-track"><div class="bar-fill" data-w="85"></div></div></div>
+          <div><div class="bar-label"><span>Wireshark</span><span>87%</span></div><div class="bar-track"><div class="bar-fill" data-w="87"></div></div></div>
+        </div>
+      </div>
+      <div class="skill-card reveal" style="transition-delay:.2s">
+        <div class="skill-ico">🛡️</div><div class="skill-name">Défense & Monitoring</div>
+        <div class="bars">
+          <div><div class="bar-label"><span>Splunk </span><span>10%</span></div><div class="bar-track"><div class="bar-fill" data-w="10"></div></div></div>
+          <div><div class="bar-label"><span>pfSense </span><span>12%</span></div><div class="bar-track"><div class="bar-fill" data-w="12"></div></div></div>
+          <div><div class="bar-label"><span>Snort / Suricata IDS</span><span>10%</span></div><div class="bar-track"><div class="bar-fill" data-w="10"></div></div></div>
+        </div>
+      </div>
+      <div class="skill-card reveal" style="transition-delay:.3s">
+        <div class="skill-ico">⚙️</div><div class="skill-name">Systèmes & Installation</div>
+        <div class="bars">
+          <div><div class="bar-label"><span>Installation de vidéosurveillances</span><span>100%</span></div><div class="bar-track"><div class="bar-fill" data-w="100"></div></div></div>
+          <div><div class="bar-label"><span>Administration windows & Linux</span><span>40%</span></div><div class="bar-track"><div class="bar-fill" data-w="40"></div></div></div>
+          <div><div class="bar-label"><span>Installation de systèmes</span><span>100%</span></div><div class="bar-track"><div class="bar-fill" data-w="100"></div></div></div>
+          <div><div class="bar-label"><span>configuration des equipements ( Switches, Routeurs et Pare feu )</span><span>76%</span></div><div class="bar-track"><div class="bar-fill" data-w="76"></div></div></div>
+        </div>
+      </div>
+      <div class="skill-card reveal" style="transition-delay:.4s">
+        <div class="skill-ico">🔐</div><div class="skill-name">Cryptographie & Stéganographie</div>
+        <div class="bars">
+          <div><div class="bar-label"><span>OpenSSL / GPG</span><span>10%</span></div><div class="bar-track"><div class="bar-fill" data-w="10"></div></div></div>
+          <div><div class="bar-label"><span>TLS/SSL </span><span>09%</span></div><div class="bar-track"><div class="bar-fill" data-w="9"></div></div></div>
+          <div><div class="bar-label"><span>Hashage & Chiffrement</span><span>35%</span></div><div class="bar-track"><div class="bar-fill" data-w="35"></div></div></div>
+          <div><div class="bar-label"><span>Stéganographie</span><span>10%</span></div><div class="bar-track"><div class="bar-fill" data-w="10"></div></div></div>
+        </div>
+      </div>
+      <div class="skill-card reveal" style="transition-delay:.5s">
+        <div class="skill-ico">☁️</div><div class="skill-name">Maintenance Informatique & Support IT</div>
+        <div class="bars">
+          <div><div class="bar-label"><span>Maintenances Materielle et logicielle</span><span>90%</span></div><div class="bar-track"><div class="bar-fill" data-w="90"></div></div></div>
+          <div><div class="bar-label"><span>Installation de Pilotes et périphériques</span><span>80%</span></div><div class="bar-track"><div class="bar-fill" data-w="80"></div></div></div>
+          <div><div class="bar-label"><span>Installation d'un réseau Informatique ( filaire et sans fil )</span><span>95%</span></div><div class="bar-track"><div class="bar-fill" data-w="95"></div></div></div>
+          <div><div class="bar-label"><span>Assistance au Utilisateur et création logo et affiche publicitaire</span><span>60%</span></div><div class="bar-track"><div class="bar-fill" data-w="60"></div></div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ PROJECTS ══════════════════════════════════════ -->
+<section id="projects" class="section-wrap" style="background:var(--ink2);border-top:1px solid var(--line);border-bottom:1px solid var(--line);">
+  <div class="section-inner">
+    <div class="reveal">
+      <div class="section-eyebrow">RÉALISATIONS</div>
+      <h2 class="section-title">Projets Personelle</h2>
+    </div>
+    <div class="proj-grid">
+      <div class="proj-card reveal" data-num="01">
+        <div class="tag-row"><span class="tag c">PENTEST</span><span class="tag g">web</span><span class="tag g">Nmap</span></div>
+        <h3 class="proj-title">Scanner de vulnérabilités Web</h3>
+        <p class="proj-desc">Outil Nessus & ffuf et Nmap pour  la détection de ports ouverts, services exposés et CVE sur un réseau local. Génère un rapport pdf.</p>
+        <div class="proj-cta"><a href="Audit eas.ci.pdf" target="_blank" style="color: inherit; text-decoration: none;">Télécharger le rapport</a></div>
+      </div>
+      <div class="proj-card reveal" data-num="02" style="transition-delay:.15s">
+        <div class="tag-row"><span class="tag r">DÉFENSE</span><span class="tag c">CISCO</span><span class="tag a">IPSec</span></div>
+        <h3 class="proj-title">Architecture réseau sécurisée</h3>
+        <p class="proj-desc">Conception sous Cisco Packet Tracer d'une infrastructure multi-sites : VLAN, ACL, DMZ, VPN site-à-site IPsec et segmentation de trafic.</p>
+        <div class="proj-cta"><a href="architecture reseau.pkt" download style="color: inherit; text-decoration: none;">Télécharger le projet</a></div>
+      </div>
+      <div class="proj-card reveal" data-num="03" style="transition-delay:.1s">
+        <div class="tag-row"><span class="tag c">Réseau </span><span class="tag g">Filtrage</span><span class="tag c">Wireshark</span></div>
+        <h3 class="proj-title">Mini-Filtrage des donnée</h3>
+        <p class="proj-desc">Mise en place d'un système de filtrage des données réseau sur Kali Linux, elle consistais a filtre les protocole HTTP,ICMP,FTP sur wireshark.</p>
+        <div class="proj-cta"><a href="Rapport TP Wireshark.pdf" target="_blank" style="color: inherit; text-decoration: none;">Télécharger le rapport</a></div>
+      </div>
+      <div class="proj-card reveal" data-num="04" style="transition-delay:.25s">
+        <div class="tag-row"><span class="tag r">AUDIT</span><span class="tag a">Recherche de failles</span><span class="tag g">Volontaire</span></div>
+        <h3 class="proj-title">Audit de sécurité </h3>
+        <p class="proj-desc">Challenges consistais à fait l'audit de sécurite des application web pour trouver les vulnerabilite qui peuvent etre utilise par des hackers à des fin nuisibles.</p>
+        <div class="proj-cta"><a href="Audit altacado.ci.pdf" target="_blank" style="color: inherit; text-decoration: none;">Télécharger le rapport</a></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ CERTIFICATIONS ══════════════════════════════════ -->
+<section id="certifications" class="section-wrap">
+  <div class="section-inner">
+    <div class="reveal" style="text-align:center;margin-bottom:1rem;">
+      <div class="section-eyebrow" style="justify-content:center;">PARCOURS</div>
+      <h2 class="section-title" style="margin-bottom:3rem;">Certifications</h2>
+    </div>
+    <div class="cert-grid">
+      <div class="cert-card reveal"><div class="cert-ico">🏅</div><div class="cert-name">Certificat en Pentest Junior</div><div class="cert-org">Expression Digital</div><div class="cert-year">2026</div><span class="badge b-done">OBTENU</span><a href="certificat ED.pdf" target="_blank" class="cert-link">Télécharger</a></div>
+      <div class="cert-card reveal" style="transition-delay:.1s"><div class="cert-ico">🌐</div><div class="cert-name">Test d'intruision web</div><div class="cert-org">Coursera</div><div class="cert-year">2026</div><span class="badge b-done">OBTENU</span><a href="Certificat - realisez un test d'intruision.pdf" target="_blank" class="cert-link">Télécharger</a></div>
+      <div class="cert-card reveal" style="transition-delay:.2s"><div class="cert-ico">🔑</div><div class="cert-name">Sécurite Numérique</div><div class="cert-org">SecNumacadémie</div><div class="cert-year">2026</div><span class="badge b-done">OBTENU</span><a href="Certificat sec numerique.pdf" target="_blank" class="cert-link">Télécharger</a></div>
+      <div class="cert-card reveal" style="transition-delay:.3s"><div class="cert-ico">🎯</div><div class="cert-name">Administration Systèmes et Réseaux de Base</div><div class="cert-org">GSIMEL ACADEMIE</div><div class="cert-year">2023</div><span class="badge b-done">OBTENU</span><a href="Administration systeme et reseau.png" target="_blank" class="cert-link">Télécharger</a></div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ CONTACT ════════════════════════════════════════ -->
+<section id="contact" class="section-wrap" style="background:var(--ink2);border-top:1px solid var(--line);">
+  <div class="section-inner">
+    <div class="contact-grid">
+      <div class="reveal">
+        <div class="section-eyebrow">COLLABORATION</div>
+        <h2 class="section-title">Parlons<br>Réseau & Sécurité</h2>
+        <p class="contact-lead">À la recherche d'un stage ou d'une alternance en Réseau et sécurite Informatique ou Support IT ou Pentester junior à partir du mois de Novembre 2026. Ouvert à toute opportunité en Techniciens IT, Pentest Web, Maintenancier Informatique, Techniciens d'installation de vidéosurveillance ou Administration systéme et réseaux.</p>
+        <a href="mailto:oabou536@gmail.com" class="contact-email">oabou536@gmail.com</a>
+        <div class="social-stack">
+          <a href="https://github.com/Abou-Ouattara-web" class="social-link">🐙&nbsp;&nbsp;GitHub — github.com/Abou-Ouattara-web</a>
+          <a href="https://www.linkedin.com/in/ouattara-abou-503a162a3/" class="social-link">💼&nbsp;&nbsp;LinkedIn — Ouattara Abou</a>
+          <a href="https://www.hackthebox.eu/profile/ouattara" class="social-link">🎯&nbsp;&nbsp;HackTheBox — Pro Hacker rank</a>
+          <a href="CV OUATTARA ABOU STAGE INFORMATICIENS.pdf" class="social-link">📄&nbsp;&nbsp;Télécharger le CV (PDF)</a>
+        </div>
+      </div>
+      <div class="reveal" style="transition-delay:.2s">
+        <div class="section-eyebrow">MESSAGE DIRECT</div>
+        <form class="form-stack" id="contact-form" action="https://formsubmit.co/ajax/oabou536@gmail.com" method="POST" style="margin-top:1.2rem;">
+          <input type="hidden" name="_subject" value="Nouveau message depuis le portfolio"/>
+          <input type="text" name="_honey" tabindex="-1" autocomplete="off" aria-hidden="true" style="display:none"/>
+          <div><label class="flabel" for="contact-name">NOM COMPLET</label><input class="finput" id="contact-name" name="name" type="text" placeholder="Kouamé Jacques" autocomplete="name" required/></div>
+          <div><label class="flabel" for="contact-email">ADRESSE EMAIL</label><input class="finput" id="contact-email" name="email" type="email" placeholder="contact@example.com" autocomplete="email" required/></div>
+          <div><label class="flabel" for="contact-subject">OBJET</label><input class="finput" id="contact-subject" name="subject" type="text" placeholder="Proposition de stage, emploi ou freelance" required/></div>
+          <div><label class="flabel" for="contact-message">MESSAGE</label><textarea class="ftextarea" id="contact-message" name="message" placeholder="Décrivez votre projet ou opportunité..." required></textarea></div>
+          <p class="form-status" id="contact-status" role="status" aria-live="polite"></p>
+          <button class="fsend" id="send-btn" type="submit">ENVOYER LE MESSAGE</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ FOOTER ════════════════════════════════════════ -->
+<footer>
+  <div class="footer-main">
+
+    <!-- BRAND + PHOTO -->
+    <div class="f-brand reveal">
+      <div class="f-logo">YOUNG <em> HACKER</em></div>
+      <p class="f-tagline">Diplômé en réseau et sécurité informatique passionné par la Cybersécurite & Vibecoding et la nouvelle technologie. Construit et installer des systèmes plus sûrs et fiables est un challenge pour moi.</p>
+
+      <!-- PHOTO DE PROFIL dans le footer -->
+      <div class="f-profile">
+        <div class="f-avatar" id="f-avatar">
+          <img src="photo.jpg" alt="Ouattara Abou" />
+        </div>
+        <div class="f-person">
+          <span class="f-name">Ouattara Abou</span>
+          <span class="f-role">Support IT <br>Administrateur Systèmes & Réseaux Junior<br>Maintenance Informatique  Installation de Vidéosurveillance <br>Pentester Junior & Vibecoding  Junior</span>
+        </div>
+      </div>
+      <div class="f-status">
+        <div class="f-dot"></div>
+        DISPONIBLE POUR UN STAGE - FREELANCE
+      </div>
+    </div>
+
+    <!-- NAV -->
+    <div class="f-col reveal" style="transition-delay:.1s">
+      <h4>Navigation</h4>
+      <ul>
+        <li><a href="#about">À propos</a></li>
+        <li><a href="#skills">Compétences</a></li>
+        <li><a href="#projects">Projets</a></li>
+        <li><a href="#Certifications">Certifications</a></li>
+        <li><a href="#Contact">Contact</a></li>
+      </ul>
+    </div>
+
+    <!-- RESSOURCES -->
+    <div class="f-col reveal" style="transition-delay:.2s">
+      <h4>Ressources</h4>
+      <ul>
+        <li><a href="CV_Ouattara_Abou_Stagiaire_Informatique.pdf" target="_blank">Télécharger CV</a></li>
+        <li><a href="https://github.com/Abou-Ouattara-web" target="_blank">GitHub</a></li>
+        <li><a href="https://www.linkedin.com/in/ouattara-abou-503a162a3/" target="_blank">LinkedIn</a></li>
+        <li><a href="https://www.hackthebox.eu/profile/ouattara" target="_blank">HackTheBox</a></li>
+      </ul>
+    </div>
+
+    <!-- CONTACT -->
+    <div class="f-col reveal" style="transition-delay:.3s">
+      <h4>Contact</h4>
+      <ul>
+        <li><a href="mailto:oabou536@gmail.com">Email direct</a></li>
+        <li><a href="tel:+225 05 56 44 61 01/ 07 18 41 40 65">Planifier un appel</a></li>
+        <li><a href="#">Abidjan, CI</a></li>
+      </ul>
+    </div>
+
+  </div>
+
+  <!-- BOTTOM BAR -->
+  <div class="footer-bottom">
+    <div class="footer-bottom-inner">
+      <div class="f-copy">© 2026 <span>Ouattara Abou</span> — Tous droits réservés</div>
+      <div class="f-made">Fait par DIGITAL CARE TECHNOLOGIES avec beaucoup d'énergie et amours</div>
+      <div class="f-socials">
+        <a href="https://github.com/Abou-Ouattara-web" class="f-soc">GitHub</a>
+        <a href="https://www.linkedin.com/in/ouattara-abou-503a162a3/" class="f-soc">LinkedIn</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- ══ JAVASCRIPT ════════════════════════════════════ -->
+<script src="script.js"></script>
+</body>
+</html>
