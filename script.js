@@ -95,43 +95,29 @@ fileInp.addEventListener('change', e=>{
   e.target.value='';
 });
 
-/* SEND CONTACT FORM */
+/* ENVOI DU FORMULAIRE VERS WHATSAPP */
+const WHATSAPP_NUMBER = '2250556446101'; // 225 (Côte d'Ivoire) + 0556446101
 const contactForm = document.getElementById('contact-form');
 const contactStatus = document.getElementById('contact-status');
-const sendButton = document.getElementById('send-btn');
 
-contactForm.addEventListener('submit', async event => {
+contactForm.addEventListener('submit', event => {
   event.preventDefault();
-  sendButton.disabled = true;
-  sendButton.textContent = 'ENVOI EN COURS...';
-  contactStatus.textContent = '';
-  contactStatus.className = 'form-status';
 
-  try {
-    const response = await fetch(contactForm.action, {
-      method: 'POST',
-      headers: { Accept: 'application/json' },
-      body: new URLSearchParams(new FormData(contactForm))
-    });
+  const data = new FormData(contactForm);
+  const text = [
+    'Bonjour Abou, je vous contacte depuis votre portfolio.',
+    '',
+    'Nom : ' + data.get('name'),
+    'Email : ' + data.get('email'),
+    'Objet : ' + data.get('subject'),
+    '',
+    'Message : ' + data.get('message')
+  ].join('\n');
 
-    if (!response.ok) {
-      throw new Error(`Erreur du service (${response.status})`);
-    }
+  const url = 'https://wa.me/' + WHATSAPP_NUMBER + '?text=' + encodeURIComponent(text);
+  window.open(url, '_blank', 'noopener');
 
-    const result = await response.json();
-    if (result.success !== true && result.success !== 'true') {
-      throw new Error(result.message || 'Le service de formulaire a refusé le message.');
-    }
-
-    contactStatus.textContent = 'Message envoyé. Merci pour votre prise de contact !';
-    contactStatus.classList.add('is-success');
-    contactForm.reset();
-  } catch (error) {
-    console.error('Échec de l’envoi du formulaire de contact :', error);
-    contactStatus.textContent = 'Échec de l’envoi. Vérifiez votre connexion ou contactez-moi directement par email.';
-    contactStatus.classList.add('is-error');
-  } finally {
-    sendButton.disabled = false;
-    sendButton.textContent = 'ENVOYER LE MESSAGE';
-  }
+  contactStatus.className = 'form-status is-success';
+  contactStatus.textContent = 'WhatsApp s’ouvre : appuyez sur « Envoyer » pour transmettre votre message.';
+  contactForm.reset();
 });
