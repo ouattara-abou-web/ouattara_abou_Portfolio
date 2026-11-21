@@ -463,6 +463,26 @@ footer{
 /* ─── ANIMATIONS & REVEAL ──────────────────────────── */
 @keyframes riseUp{from{opacity:0;transform:translateY(28px);}to{opacity:1;transform:translateY(0);}}
 @keyframes fadeIn{from{opacity:0;}to{opacity:1;}}
+* { box-sizing: border-box; }
+html, body { max-width: 100%; overflow-x: hidden; }
+img, video, iframe { max-width: 100%; height: auto; }
+
+@media (max-width: 768px) {
+  section, .container { width: 100%; padding: 2.5rem 1rem; }
+
+  [class*="grid"], [class*="row"], [class*="hero"],
+  [class*="about"], [class*="contact"], [class*="projects"], [class*="skills"] {
+    display: flex !important;
+    flex-direction: column !important;
+    grid-template-columns: 1fr !important;
+    gap: 1.2rem;
+  }
+
+  h1 { font-size: 2rem; }
+  h2 { font-size: 1.6rem; }
+
+  nav ul { flex-wrap: wrap; justify-content: center; gap: .8rem; }
+}
 .reveal{opacity:0;transform:translateY(32px);transition:opacity .75s ease,transform .75s ease;}
 .reveal.on{opacity:1;transform:translateY(0);}
 
