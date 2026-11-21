@@ -72,6 +72,28 @@ window.addEventListener('scroll',()=>{
   navAs.forEach(a=>a.classList.toggle('active',a.getAttribute('href')==='#'+cur));
 });
 
+/* MOBILE NAV */
+const navToggle = document.querySelector('.nav-toggle');
+const navLinks = document.querySelector('.nav-links');
+
+if (navToggle && navLinks) {
+  navToggle.addEventListener('click', () => {
+    const open = navLinks.classList.toggle('is-open');
+    navToggle.classList.toggle('is-open', open);
+    navToggle.setAttribute('aria-expanded', String(open));
+    navToggle.setAttribute('aria-label', open ? 'Fermer le menu' : 'Ouvrir le menu');
+  });
+
+  navLinks.querySelectorAll('a').forEach(link => {
+    link.addEventListener('click', () => {
+      navLinks.classList.remove('is-open');
+      navToggle.classList.remove('is-open');
+      navToggle.setAttribute('aria-expanded', 'false');
+      navToggle.setAttribute('aria-label', 'Ouvrir le menu');
+    });
+  });
+}
+
 /* PHOTO UPLOAD */
 const fileInp = document.getElementById('file-inp');
 fileInp.addEventListener('change', e=>{
@@ -95,29 +117,25 @@ fileInp.addEventListener('change', e=>{
   e.target.value='';
 });
 
-/* ENVOI DU FORMULAIRE VERS WHATSAPP */
-const WHATSAPP_NUMBER = '2250556446101'; // 225 (Côte d'Ivoire) + 0556446101
+/* OPEN WHATSAPP WITH CONTACT MESSAGE */
 const contactForm = document.getElementById('contact-form');
 const contactStatus = document.getElementById('contact-status');
 
 contactForm.addEventListener('submit', event => {
   event.preventDefault();
-
-  const data = new FormData(contactForm);
-  const text = [
-    'Bonjour Abou, je vous contacte depuis votre portfolio.',
+  const formData = new FormData(contactForm);
+  const message = [
+    'Bonjour, je vous contacte depuis votre portfolio.',
     '',
-    'Nom : ' + data.get('name'),
-    'Email : ' + data.get('email'),
-    'Objet : ' + data.get('subject'),
+    `Nom : ${formData.get('name').trim()}`,
+    `Email : ${formData.get('email').trim()}`,
+    `Objet : ${formData.get('subject').trim()}`,
     '',
-    'Message : ' + data.get('message')
+    `Message :\n${formData.get('message').trim()}`
   ].join('\n');
+  const whatsappUrl = `https://wa.me/2250556446101?text=${encodeURIComponent(message)}`;
 
-  const url = 'https://wa.me/' + WHATSAPP_NUMBER + '?text=' + encodeURIComponent(text);
-  window.open(url, '_blank', 'noopener');
-
-  contactStatus.className = 'form-status is-success';
-  contactStatus.textContent = 'WhatsApp s’ouvre : appuyez sur « Envoyer » pour transmettre votre message.';
-  contactForm.reset();
+  window.open(whatsappUrl, '_blank', 'noopener,noreferrer');
+  contactStatus.textContent = 'WhatsApp s’est ouvert avec votre message prérempli. Vérifiez-le puis appuyez sur « Envoyer » dans WhatsApp.';
+  contactStatus.classList.add('is-info');
 });
