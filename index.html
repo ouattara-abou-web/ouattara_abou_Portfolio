@@ -17,7 +17,10 @@
 <!-- ══ NAV ═══════════════════════════════════════════ -->
 <nav id="main-nav">
   <div class="nav-logo">YOUNG <em> HACKER</em></div>
-  <ul class="nav-links">
+  <button class="nav-toggle" type="button" aria-label="Ouvrir le menu" aria-expanded="false" aria-controls="nav-links">
+    <span></span><span></span><span></span>
+  </button>
+  <ul class="nav-links" id="nav-links">
     <li><a href="#about">À propos</a></li>
     <li><a href="#skills">Compétences</a></li>
     <li><a href="#projects">Projets</a></li>
@@ -97,7 +100,7 @@
             <div><span class="to">{</span></div>
             <div><span class="to">&nbsp;</span><span class="tv">"role"</span><span class="to">: </span><span class="tstr">"Etudiant en IT passionne de la Cybersécurite"</span><span class="to">,</span></div>
             <div><span class="to">&nbsp;</span><span class="tv">"year"</span><span class="to">: </span><span class="tstr">"Diplôme en Réseau et Sécurite Informatique "</span><span class="to">,</span></div>
-            <div><span class="to">&nbsp;</span><span class="tv">"focus"</span><span class="to">: [</span><span class="tok">"Pentest Web Junior"</span><span class="to">,</span><span class="tok">"Techniciens Réseaux et Systémes"</span><span class="to">,</ span><span class="tok">"Installation de vidéosurveillance et Vibecoding"</ span>< span class="to">],</ span>
+            <div><span class="to">&nbsp;</span><span class="tv">"focus"</span><span class="to">: [</span><span class="tok">"Pentest Web Junior"</span><span class="to">,</span> <span class="tok">"Techniciens Réseaux et Systèmes"</span><span class="to">,</span> <span class="tok">"Vidéosurveillance & Vibecoding"</span><span class="to">],</span></div>
             <div><span class="to">&nbsp;</span><span class="tv">"ctf_rank"</span><span class="to">: </span><span class="tstr">"Hacker Debutant"</span><span class="to">,</span></div>
             <div><span class="to">&nbsp;</span><span class="tv">"open"</span><span class="to">: </span><span class="tok">true</span></div>
             <div><span class="to">}</span></div>
@@ -189,31 +192,31 @@
         <p class="proj-desc">Outil Nessus & ffuf et Nmap pour  la détection de ports ouverts, services exposés et CVE sur un réseau local. Génère un rapport pdf.</p>
         <div class="proj-cta"><a href="Audit eas.ci.pdf" target="_blank" style="color: inherit; text-decoration: none;">Télécharger le rapport</a></div>
       </div>
-      <div class="proj-card reveal" data-num="02">
-        <div class="tag-row"><span class="tag c">Site web</span><span class="tag g">vibecoding</span><span class="tag g">vitrine</span></div>
-        <h3 class="proj-title">comception de site Web vitrine</h3>
-        <p class="proj-desc"> vibecoding en html,css,js. Pour une entreprise dans le domaine du numerique.</p>
-        <div class="proj-cta"><a href="https://digital-care-technologie.vercel.app/" target="_blank" style="color: inherit; text-decoration: none;">Télécharger le rapport</a></div>
+      <div class="proj-card reveal" data-num="02" style="transition-delay:.1s">
+        <div class="tag-row"><span class="tag c">Site web</span><span class="tag g">Vibecoding</span><span class="tag g">Vitrine</span></div>
+        <h3 class="proj-title">Conception de site web vitrine</h3>
+        <p class="proj-desc">Conception d'un site web vitrine en HTML, CSS et JavaScript pour une entreprise du domaine numérique.</p>
+        <div class="proj-cta"><a href="https://digital-care-technologie.vercel.app/" target="_blank" rel="noopener noreferrer" style="color: inherit; text-decoration: none;">Visiter le site</a></div>
       </div>
-      <div class="proj-card reveal" data-num="03">
-        <div class="tag-row"><span class="tag c">RESEAU D'ENTREPRISE</span><span class="tag g">addressage</span><span class="tag g">Configuration</span></div>
-        <h3 class="proj-title">Architecture Réseaux</h3>
-        <p class="proj-desc"> Conception de differents architecture réseau ( filaire,sans fil, filaire/sans fil) et une connection direct de deux poste</p>
-        <div class="proj-cta"><a href="TP PROGRAMME D-CLIC.pkt" target="_blank" style="color: inherit; text-decoration: none;">Télécharger le rapport</a></div>
+      <div class="proj-card reveal" data-num="03" style="transition-delay:.2s">
+        <div class="tag-row"><span class="tag c">Réseau d'entreprise</span><span class="tag g">Adressage</span><span class="tag g">Configuration</span></div>
+        <h3 class="proj-title">Architecture réseaux</h3>
+        <p class="proj-desc">Conception d'architectures réseau filaires, sans fil ou mixtes, avec connexion directe de deux postes.</p>
+        <div class="proj-cta"><a href="TP PROGRAMME D-CLIC.pkt" download style="color: inherit; text-decoration: none;">Télécharger le projet</a></div>
       </div>
-      <div class="proj-card reveal" data-num="04" style="transition-delay:.15s">
+      <div class="proj-card reveal" data-num="04" style="transition-delay:.3s">
         <div class="tag-row"><span class="tag r">DÉFENSE</span><span class="tag c">CISCO</span><span class="tag a">IPSec</span></div>
         <h3 class="proj-title">Architecture réseau sécurisée</h3>
         <p class="proj-desc">Conception sous Cisco Packet Tracer d'une infrastructure multi-sites : VLAN, ACL, DMZ, VPN site-à-site IPsec et segmentation de trafic.</p>
         <div class="proj-cta"><a href="architecture reseau.pkt" download style="color: inherit; text-decoration: none;">Télécharger le projet</a></div>
       </div>
-      <div class="proj-card reveal" data-num="05" style="transition-delay:.1s">
+      <div class="proj-card reveal" data-num="05" style="transition-delay:.4s">
         <div class="tag-row"><span class="tag c">Réseau </span><span class="tag g">Filtrage</span><span class="tag c">Wireshark</span></div>
         <h3 class="proj-title">Mini-Filtrage des donnée</h3>
         <p class="proj-desc">Mise en place d'un système de filtrage des données réseau sur Kali Linux, elle consistais a filtre les protocole HTTP,ICMP,FTP sur wireshark.</p>
         <div class="proj-cta"><a href="Rapport TP Wireshark.pdf" target="_blank" style="color: inherit; text-decoration: none;">Télécharger le rapport</a></div>
       </div>
-      <div class="proj-card reveal" data-num="06" style="transition-delay:.25s">
+      <div class="proj-card reveal" data-num="06" style="transition-delay:.5s">
         <div class="tag-row"><span class="tag r">AUDIT</span><span class="tag a">Recherche de failles</span><span class="tag g">Volontaire</span></div>
         <h3 class="proj-title">Audit de sécurité </h3>
         <p class="proj-desc">Challenges consistais à fait l'audit de sécurite des application web pour trouver les vulnerabilite qui peuvent etre utilise par des hackers à des fin nuisibles.</p>
@@ -256,16 +259,14 @@
         </div>
       </div>
       <div class="reveal" style="transition-delay:.2s">
-        <div class="section-eyebrow">MESSAGE DIRECT</div>
-        <form class="form-stack" id="contact-form" action="https://formsubmit.co/ajax/oabou536@gmail.com" method="POST" style="margin-top:1.2rem;">
-          <input type="hidden" name="_subject" value="Nouveau message depuis le portfolio"/>
-          <input type="text" name="_honey" tabindex="-1" autocomplete="off" aria-hidden="true" style="display:none"/>
+        <div class="section-eyebrow">MESSAGE VIA WHATSAPP</div>
+        <form class="form-stack" id="contact-form" style="margin-top:1.2rem;">
           <div><label class="flabel" for="contact-name">NOM COMPLET</label><input class="finput" id="contact-name" name="name" type="text" placeholder="Kouamé Jacques" autocomplete="name" required/></div>
           <div><label class="flabel" for="contact-email">ADRESSE EMAIL</label><input class="finput" id="contact-email" name="email" type="email" placeholder="contact@example.com" autocomplete="email" required/></div>
           <div><label class="flabel" for="contact-subject">OBJET</label><input class="finput" id="contact-subject" name="subject" type="text" placeholder="Proposition de stage, emploi ou freelance" required/></div>
           <div><label class="flabel" for="contact-message">MESSAGE</label><textarea class="ftextarea" id="contact-message" name="message" placeholder="Décrivez votre projet ou opportunité..." required></textarea></div>
-          <p class="form-status" id="contact-status" role="status" aria-live="polite"></p>
-          <button class="fsend" id="send-btn" type="submit">ENVOYER LE MESSAGE</button>
+          <p class="form-status" id="contact-status" role="status" aria-live="polite">WhatsApp s’ouvrira avec votre message prérempli. Vous pourrez le vérifier et appuyer sur « Envoyer ».</p>
+          <button class="fsend" id="send-btn" type="submit">CONTINUER SUR WHATSAPP</button>
         </form>
       </div>
     </div>
@@ -304,8 +305,8 @@
         <li><a href="#about">À propos</a></li>
         <li><a href="#skills">Compétences</a></li>
         <li><a href="#projects">Projets</a></li>
-        <li><a href="#Certifications">Certifications</a></li>
-        <li><a href="#Contact">Contact</a></li>
+        <li><a href="#certifications">Certifications</a></li>
+        <li><a href="#contact">Contact</a></li>
       </ul>
     </div>
 
@@ -313,7 +314,7 @@
     <div class="f-col reveal" style="transition-delay:.2s">
       <h4>Ressources</h4>
       <ul>
-        <li><a href="CV_Ouattara_Abou_Stagiaire_Informatique.pdf" target="_blank">Télécharger CV</a></li>
+        <li><a href="CV OUATTARA ABOU STAGE INFORMATICIENS.pdf" target="_blank">Télécharger CV</a></li>
         <li><a href="https://github.com/Abou-Ouattara-web" target="_blank">GitHub</a></li>
         <li><a href="https://www.linkedin.com/in/ouattara-abou-503a162a3/" target="_blank">LinkedIn</a></li>
         <li><a href="https://www.hackthebox.eu/profile/ouattara" target="_blank">HackTheBox</a></li>
